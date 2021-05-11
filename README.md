@@ -1,4 +1,4 @@
-# Object Detection Web-app
+# Simple Object Detection Web-app
 
 Deploying an Object Detection Service.  
     
