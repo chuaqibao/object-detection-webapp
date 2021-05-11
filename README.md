@@ -28,17 +28,5 @@ SSD-based object detection model trained on Open Images V4 with ImageNet pre-tra
 The model used for object detection can be found [here](https://tfhub.dev/google/openimages_v4/ssd/mobilenet_v2/1).
 
 
-## Inference Time
-/static/img/Screenshot 2021-05-04 at 11.12.34 PM.png  
-Inference time: 8.116887092590332  
-  
-/static/img/The_Coleoptera_of_the_British_islands_(Plate_125)_(8592917784).jpeg  
-Inference time: 7.186975955963135   
-  
-static/img/1024px-Biblioteca_Maimónides,_Campus_Universitario_de_Rabanales_007.jpeg  
-Inference time: 7.669946193695068
-
-
-
 
 
