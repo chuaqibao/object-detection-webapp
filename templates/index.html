@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<title>
+    Object Detection Web-app
+</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+
+        <!-- NavBar -->
+        <nav class="navbar navbar-dark bg-dark">
+            <h3 class="text-white">Simple Demo</h3>
+        </nav>
+
+        <div class="container h-100">
+            <div class="row justify-content-center">
+                <div class="d-flex m-4 flex-column">
+
+                    <!-- Title -->
+                    <div>
+                        <h2 class="text-center">Object Detection Web-app</h2>
+                    </div>
+    
+
+                    <!-- Instructions -->
+                    <div>
+                        <p class="mt-4 text-sm-left">
+                            <b>Instructions</b> <br>
+                            1. Upload an image file with objects you'd like to detect <br>
+                            2. Your image should appear in the space below <br>
+                            3. Click the "Start Detection" button to start detecting! <br>
+                            4. The objects that are detected will be bounded by boxes. <br>
+                        </p>
+                    </div>
+    
+
+                    <!-- Upload -->
+                    <form action='/upload/' method='POST' enctype="multipart/form-data"> 
+                        <div class="mt-4 input-group mb-3">
+
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="submit">Upload</button>
+                            </div>
+    
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01" name="image">
+                                <label class="custom-file-label" for="inputGroupFile01">{{ filename }}</label>
+                            </div>
+    
+                        </div>
+                    </form>
+
+
+                    <!-- Image -->
+                    {% if filepath %}
+                        <img src="{{ filepath }}" class="img-fluid">
+                    {% endif %}
+
+                    
+                    <!-- GIF -->
+                    <div class="row m-4 justify-content-center">
+                        <div id="loading" style="display:none;">
+                            <img src="static/img/loading.gif" alt="" />Loading!
+                        </div>
+                    </div>
+
+
+                    <!-- Start Button -->
+                    <form action='/detect/' method='POST'> 
+                        <div class="row m-4 justify-content-center">
+                            <button type="submit" class="btn btn-secondary btn-lg" id='startBtn' onclick="$('#loading').show();">Start Detection</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
