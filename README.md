@@ -16,6 +16,7 @@ python app.py
 2. Your image should appear in the space below
 3. Click the "Start Detection" button to start detecting!
 4. The objects that are detected will be bounded by boxes.
+![Screenshot 2021-05-04 at 11 12 34 PM](https://user-images.githubusercontent.com/62118373/125259608-0ebbf100-e332-11eb-8290-900a0b8ebba8.png)
 
 ## List of Detectable Objects
 
@@ -26,7 +27,6 @@ Information about the dataset the detector is trained on can be found [here](htt
 SSD-based object detection model trained on Open Images V4 with ImageNet pre-trained MobileNet V2 as image feature extractor.  
   
 The model used for object detection can be found [here](https://tfhub.dev/google/openimages_v4/ssd/mobilenet_v2/1).
-
 
 
 
